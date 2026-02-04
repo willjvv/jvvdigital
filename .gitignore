@@ -1,0 +1,4 @@
+node_modules
+.astro
+.env.d.ts
+package-lock.json
