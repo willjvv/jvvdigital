@@ -1,0 +1,88 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>JVV Digital - AI & SEO Visibility Experts</title>
+    <meta name="title" content="JVV Digital - AI & SEO Visibility Experts" />
+    <meta name="description" content="We diagnose and fix hidden technical problems that stifle your website's growth, building authority to rank on Google and AI tools where your future clients search." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jvvdigital.com/" />
+    <meta property="og:title" content="JVV Digital - AI & SEO Visibility Experts" />
+    <meta property="og:description" content="Building Digital Authority That Drives Qualified Leads" />
+    <meta property="og:image" content="https://jvvdigital.com/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jvvdigital.com/" />
+    <meta property="twitter:title" content="JVV Digital - AI & SEO Visibility Experts" />
+    <meta property="twitter:description" content="Building Digital Authority That Drives Qualified Leads" />
+    <meta property="twitter:image" content="https://jvvdigital.com/og-image.jpg" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "JVV Digital",
+        "description": "AI & SEO Visibility Experts for Small Businesses",
+        "url": "https://jvvdigital.com",
+        "logo": "https://jvvdigital.com/logo.svg",
+        "areaServed": "Global",
+        "serviceType": "SEO Consulting, AI Visibility Optimization, Technical SEO"
+      }
+    </script>
+    
+    <style>
+      :root {
+        --jvv-blue: #0066FF;
+        --jvv-orange: #FF6B35;
+      }
+      
+      .gradient-bg {
+        background: linear-gradient(135deg, var(--jvv-blue) 0%, #0047CC 100%);
+      }
+      
+      .gradient-text {
+        background: linear-gradient(90deg, var(--jvv-blue) 0%, var(--jvv-orange) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .glow {
+        box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+      }
+    </style>
+  </head>
+  <body class="bg-jvv-light text-jvv-dark font-sans">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    
+    <!-- Simple Analytics Script -->
+    <script defer>
+      // Add your analytics code here
+      console.log('JVV Digital - AI & SEO Experts');
+    </script>
+  </body>
+</html>
