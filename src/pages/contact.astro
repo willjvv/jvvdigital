@@ -1,0 +1,223 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact - JVV Digital">
+  <!-- Hero -->
+  <section class="pt-20 pb-16">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Get Your Free AI & SEO Audit</h1>
+        <p class="text-xl text-gray-600">
+          Let's analyze your current visibility and create a roadmap for dominating both Google and AI search platforms.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Info -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div>
+          <div class="bg-white rounded-2xl shadow-xl p-8">
+            <h2 class="text-2xl font-bold mb-2">Request Your Free Audit</h2>
+            <p class="text-gray-600 mb-8">
+              Fill out the form below and we'll contact you within 24 hours to schedule your free 30-minute consultation.
+            </p>
+            
+            <form id="contact-form" class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jvv-blue focus:border-transparent outline-none transition"
+                  placeholder="John Smith"
+                />
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jvv-blue focus:border-transparent outline-none transition"
+                  placeholder="john@example.com"
+                />
+              </div>
+              
+              <div>
+                <label for="website" class="block text-sm font-medium text-gray-700 mb-2">Website URL *</label>
+                <input
+                  type="url"
+                  id="website"
+                  name="website"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jvv-blue focus:border-transparent outline-none transition"
+                  placeholder="https://yourwebsite.com"
+                />
+              </div>
+              
+              <div>
+                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Primary Interest</label>
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jvv-blue focus:border-transparent outline-none transition"
+                >
+                  <option value="">Select a service</option>
+                  <option value="audit">Technical SEO Audit</option>
+                  <option value="ai">AI Visibility Optimization</option>
+                  <option value="ongoing">Ongoing SEO Management</option>
+                  <option value="not-sure">Not Sure - Need Guidance</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">What are your main goals?</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jvv-blue focus:border-transparent outline-none transition"
+                  placeholder="E.g., Increase organic traffic, improve AI visibility, fix technical issues..."
+                ></textarea>
+              </div>
+              
+              <button
+                type="submit"
+                class="w-full bg-jvv-orange text-white py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors duration-200"
+              >
+                Request Free Audit →
+              </button>
+              
+              <p class="text-gray-500 text-sm text-center">
+                By submitting, you agree to our Privacy Policy. No spam, ever.
+              </p>
+            </form>
+            
+            <div id="form-success" class="hidden mt-6 p-4 bg-green-50 text-green-700 rounded-lg">
+              Thank you! Your audit request has been received. We'll contact you within 24 hours.
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info & FAQ -->
+        <div>
+          <div class="space-y-8">
+            <!-- What to Expect -->
+            <div class="bg-gradient-to-br from-jvv-blue to-blue-600 rounded-2xl p-8 text-white">
+              <h3 class="text-2xl font-bold mb-4">What's Included in Your Free Audit</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-white mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Technical SEO health check</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-white mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>AI visibility assessment</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-white mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>30-minute strategy session</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-white mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Actionable recommendations</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-white mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>No obligation to continue</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- FAQ -->
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+              <h3 class="text-2xl font-bold mb-6">Frequently Asked Questions</h3>
+              <div class="space-y-6">
+                <div>
+                  <h4 class="font-bold mb-2">How long does the audit take?</h4>
+                  <p class="text-gray-600">We typically deliver the initial audit report within 3-5 business days after our consultation.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">Is there any commitment?</h4>
+                  <p class="text-gray-600">No. The free audit and consultation come with zero obligation to purchase any services.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">What if I'm not technical?</h4>
+                  <p class="text-gray-600">We explain everything in plain English. Our focus is on business outcomes, not technical jargon.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">How soon will I see results?</h4>
+                  <p class="text-gray-600">Technical fixes often show results within weeks. AI optimization and authority building are ongoing processes.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="bg-gray-50 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold mb-6">Other Ways to Connect</h3>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <svg class="w-6 h-6 text-jvv-blue mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89-3.23a2 2 0 012.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <div>
+                    <div class="font-medium">Email</div>
+                    <a href="mailto:hello@jvvdigital.com" class="text-gray-600 hover:text-jvv-blue">hello@jvvdigital.com</a>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-6 h-6 text-jvv-orange mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                  </svg>
+                  <div>
+                    <div class="font-medium">Response Time</div>
+                    <div class="text-gray-600">Within 24 hours on business days</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    // In a real implementation, this would send to your backend
+    // For now, we'll just show a success message
+    document.getElementById('form-success').classList.remove('hidden');
+    document.getElementById('contact-form').reset();
+    
+    // Scroll to success message
+    document.getElementById('form-success').scrollIntoView({ behavior: 'smooth' });
+    
+    // Here you would typically:
+    // 1. Send form data to your API/backend
+    // 2. Integrate with email service (like SendGrid)
+    // 3. Add to CRM (like HubSpot)
+    // 4. Set up form tracking (like Google Analytics)
+  });
+</script>
