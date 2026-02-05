@@ -3,5 +3,11 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://jvvdigital.com',
-  integrations: [tailwind()]
+  base: '/', 
+  trailingSlash: 'always',
+  integrations: [tailwind()],
+  output: 'static',
+  build: {
+    format: 'directory'
+  }
 });
