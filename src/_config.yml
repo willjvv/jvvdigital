@@ -1,0 +1,23 @@
+# This file tells GitHub Pages NOT to process Astro files with Jekyll
+# Keep this in src/ directory
+
+title: JVV Digital
+email: will@jvvdigital.com
+description: >-
+  AI & SEO Visibility Experts for Small Businesses
+baseurl: "" 
+url: "https://jvvdigital.com"
+
+# Disable Jekyll processing
+exclude:
+  - "*.astro"
+  - "*.js"
+  - "*.ts"
+  - "*.json"
+  - "*.mdx"
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - astro.config.mjs
+  - tailwind.config.js
+  - .github/

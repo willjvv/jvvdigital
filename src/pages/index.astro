@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+
+const pageTitle = "Home - JVV Digital";
+const pageDescription = "Building Digital Authority That Drives Qualified Leads";
+---
+
+<Layout title="Home - JVV Digital">
+  <Hero />
+
+  <!-- Services Preview -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Strategic Services for Modern Visibility</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          We provide comprehensive solutions that bridge traditional SEO with cutting-edge AI visibility.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <ServiceCard
+          title="Technical SEO Audit & Fix"
+          description="Deep-dive analysis and correction of hidden technical issues that prevent your website from ranking."
+          features={[
+            "Comprehensive site audit",
+            "Performance optimization",
+            "Mobile responsiveness fix",
+            "Structured data implementation",
+            "Detailed report with actionable insights"
+          ]}
+          ctaText="Get Your Free Audit"
+        />
+
+        <ServiceCard
+          title="AI Visibility Optimization"
+          description="Optimize your content and structure for AI answer engines (ChatGPT, Perplexity, etc.)"
+          features={[
+            "AI visibility audit",
+            "Content restructuring for AI",
+            "Schema markup optimization",
+            "Q&A content strategy",
+            "AI tool compatibility check"
+          ]}
+          ctaText="Get Your Free Audit"
+          highlighted={true}
+        />
+
+        <ServiceCard
+          title="Ongoing SEO Authority"
+          description="Monthly retainer to maintain and grow your visibility across all search platforms."
+          features={[
+            "Monthly performance reports",
+            "Content strategy & creation",
+            "Link building outreach",
+            "AI & Google ranking monitoring",
+            "Technical maintenance"
+          ]}
+          ctaText="Get Your Free Audit"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 gradient-bg">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Ready to Dominate Google & AI Search?
+      </h2>
+      <p class="text-blue-100 text-xl mb-10 max-w-2xl mx-auto">
+        Get a free technical audit of your website's current performance and AI visibility potential.
+      </p>
+      <a 
+        href="/contact" 
+        class="inline-block bg-white text-jvv-blue px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-2xl"
+      >
+        Claim Your Free Audit Now →
+      </a>
+      <p class="text-blue-200 text-sm mt-4">
+        No commitment • 30-minute call • Actionable insights
+      </p>
+    </div>
+  </section>
+</Layout>

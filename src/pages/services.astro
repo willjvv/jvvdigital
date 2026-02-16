@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+---
+
+<Layout title="Services - JVV Digital">
+  <!-- Hero -->
+  <section class="pt-20 pb-16 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Simple, Powerful SEO Solutions</h1>
+        <p class="text-xl text-gray-600">
+          We've simplified digital growth into three clear steps: Fix it, Watch it, and Grow it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section id="core-services" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
+        <!-- SEO Overhaul -->
+        <ServiceCard
+          title="SEO Overhaul"
+          description="Your comprehensive foundation for digital visibility. We diagnose and fix technical issues, optimize for AI search, and position your site for growth."
+          features={[
+            "Complete technical audit and fixes",
+            "AI visibility optimization & schema markup",
+            "Performance and Core Web Vitals tuning",
+            "Competitive keyword analysis",
+            "Google Search Console optimization"
+          ]}
+          ctaText="Get Your Free Audit"
+          highlighted={true}
+        >
+          <svg slot="icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+          </svg>
+        </ServiceCard>
+
+        <!-- Ongoing Monitoring -->
+        <ServiceCard
+          title="Ongoing AI/SEO Monitoring"
+          description="Stay ahead of the curve with continuous monitoring across Google and AI answer engines. We protect your rankings and adapt to the evolving search landscape."
+          features={[
+            "Monthly Google & AI search rankings",
+            "Real-time technical health monitoring",
+            "Competitor movement tracking",
+            "Algorithm update adjustments",
+            "Quarterly strategy reviews"
+          ]}
+          ctaText="Get Your Free Audit"
+        >
+          <svg slot="icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+        </ServiceCard>
+      </div>
+
+      <!-- Addons -->
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4">Accelerate Results with Add-Ons</h2>
+        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+          Enhance your SEO Overhaul or Ongoing Monitoring with these powerful growth tools.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <ServiceCard
+            title="AI-Optimized Content"
+            description="Strategic articles built specifically for both Google rankings and AI answer engines."
+            features={["Keyword-targeted content", "AI search optimization", "Internal linking strategy", "Monthly content calendar"]
+            }
+            ctaText="Learn More"
+            compact={true}
+          />
+          <ServiceCard
+            title="Authority Building"
+            description="Strategic link acquisition and brand positioning to establish domain authority."
+            features={["Outreach campaigns", "Guest posting placement", "PR distribution", "Backlink analysis"]
+            }
+            ctaText="Learn More"
+            compact={true}
+          />
+          <ServiceCard
+            title="Local Search Domination"
+            description="Dominate your local search results and map listings in your area."
+            features={["Google Business Profile optimization", "Citation building", "Review management", "Local schema markup"]
+            }
+            ctaText="Learn More"
+            compact={true}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-20 bg-gray-50 mt-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Your Path to Growth</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          A simple three-step approach to building visibility that drives real leads.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="text-center p-8 bg-white rounded-2xl">
+          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-white text-2xl font-bold">1</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Audit & Analysis</h3>
+          <p class="text-gray-600">
+            We analyze your site's technical health, AI visibility potential, and competitive position.
+          </p>
+        </div>
+        <div class="text-center p-8 bg-white rounded-2xl">
+          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-white text-2xl font-bold">2</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Implementation</h3>
+          <p class="text-gray-600">
+            We fix problems and optimize your presence across Google and AI search platforms.
+          </p>
+        </div>
+        <div class="text-center p-8 bg-white rounded-2xl">
+          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-white text-2xl font-bold">3</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Growth & Monitoring</h3>
+          <p class="text-gray-600">
+            Ongoing monitoring and optimization keeps your visibility strong as search evolves.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Ready to Explore Your Options?</h2>
+      <p class="text-gray-600 text-lg mb-10 max-w-2xl mx-auto">
+        Schedule your free audit to understand your current visibility and find the right service path for your business goals.
+      </p>
+      <a 
+        href="/contact" 
+        class="inline-block bg-jvv-orange text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all duration-200 transform hover:scale-105 shadow-xl"
+      >
+        Get Your Free Audit →
+      </a>
+      <p class="text-gray-500 text-sm mt-4">
+        30-minute consultation • Complete technical assessment • Zero obligation
+      </p>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,55 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-jvv-dark text-white pt-16 pb-8">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <!-- Company Info -->
+      <div class="col-span-1 md:col-span-2">
+        <div class="flex items-center space-x-3 mb-6">
+          <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">JVV</span>
+          </div>
+          <div>
+            <span class="text-xl font-bold">JVV Digital</span>
+            <span class="block text-sm text-gray-400 font-mono">AI & SEO Visibility Experts</span>
+          </div>
+        </div>
+        <p class="text-gray-400 mb-8 max-w-md">
+          We specialize in diagnosing technical SEO issues and optimizing websites for both Google and AI answer engines, helping small businesses capture qualified leads from modern search platforms.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a href="/" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+          <li><a href="/services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+          <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+          <li><a href="/contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="text-lg font-bold mb-6">Services</h4>
+        <ul class="space-y-3">
+          <li><a href="/services#audit" class="text-gray-400 hover:text-white transition-colors">Technical SEO Audit</a></li>
+          <li><a href="/services#ai" class="text-gray-400 hover:text-white transition-colors">AI Visibility Optimization</a></li>
+          <li><a href="/services#ongoing" class="text-gray-400 hover:text-white transition-colors">Ongoing SEO Authority</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <div class="text-gray-500 text-sm mb-4 md:mb-0">
+        © {currentYear} JVV Digital. All rights reserved.
+      </div>
+      <div class="text-gray-500 text-sm">
+        <span class="text-jvv-orange font-mono">//</span> Building Digital Authority Since 2024
+      </div>
+    </div>
+  </div>
+</footer>
