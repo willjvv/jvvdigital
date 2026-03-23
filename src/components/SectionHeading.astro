@@ -1,0 +1,15 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  copy?: string;
+  center?: boolean;
+}
+
+const { eyebrow, title, copy, center = false } = Astro.props;
+---
+<div class:list={['max-w-3xl', center ? 'mx-auto text-center' : 'text-left']}>
+  {eyebrow && <div class="eyebrow">{eyebrow}</div>}
+  <h2 class="section-title mt-4">{title}</h2>
+  {copy && <p class="section-copy mx-auto">{copy}</p>}
+</div>

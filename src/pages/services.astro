@@ -1,156 +1,201 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ServiceCard from '../components/ServiceCard.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+
+const title = 'Services | JVV Digital';
+const description = 'Technical visibility foundation, AI and search visibility strategy, and strategic website infrastructure from JVV Digital.';
+
+const serviceSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Technical Visibility Foundation',
+    serviceType: 'Technical SEO and discoverability optimization',
+    provider: { '@type': 'Organization', name: 'JVV Digital' },
+    areaServed: 'United States'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'AI plus Search Visibility Strategy',
+    serviceType: 'AI visibility strategy and ongoing optimization',
+    provider: { '@type': 'Organization', name: 'JVV Digital' },
+    areaServed: 'United States'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Strategic Website Infrastructure',
+    serviceType: 'Website rebuilds and technical website development',
+    provider: { '@type': 'Organization', name: 'JVV Digital' },
+    areaServed: 'United States'
+  }
+];
 ---
-
-<Layout title="Services - JVV Digital">
-  <!-- Hero -->
-  <section class="pt-20 pb-16 bg-gradient-to-b from-white to-gray-50">
-    <div class="container mx-auto px-6">
-      <div class="max-w-3xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">Simple, Powerful SEO Solutions</h1>
-        <p class="text-xl text-gray-600">
-          We've simplified digital growth into three clear steps: Fix it, Watch it, and Grow it.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Detail -->
-  <section id="core-services" class="py-20">
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
-        <!-- SEO Overhaul -->
-        <ServiceCard
-          title="SEO Overhaul"
-          description="Your comprehensive foundation for digital visibility. We diagnose and fix technical issues, optimize for AI search, and position your site for growth."
-          features={[
-            "Complete technical audit and fixes",
-            "AI visibility optimization & schema markup",
-            "Performance and Core Web Vitals tuning",
-            "Competitive keyword analysis",
-            "Google Search Console optimization"
-          ]}
-          ctaText="Get Your Free Audit"
-          highlighted={true}
-        >
-          <svg slot="icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-          </svg>
-        </ServiceCard>
-
-        <!-- Ongoing Monitoring -->
-        <ServiceCard
-          title="Ongoing AI/SEO Monitoring"
-          description="Stay ahead of the curve with continuous monitoring across Google and AI answer engines. We protect your rankings and adapt to the evolving search landscape."
-          features={[
-            "Monthly Google & AI search rankings",
-            "Real-time technical health monitoring",
-            "Competitor movement tracking",
-            "Algorithm update adjustments",
-            "Quarterly strategy reviews"
-          ]}
-          ctaText="Get Your Free Audit"
-        >
-          <svg slot="icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-          </svg>
-        </ServiceCard>
-      </div>
-
-      <!-- Addons -->
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-4">Accelerate Results with Add-Ons</h2>
-        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
-          Enhance your SEO Overhaul or Ongoing Monitoring with these powerful growth tools.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ServiceCard
-            title="AI-Optimized Content"
-            description="Strategic articles built specifically for both Google rankings and AI answer engines."
-            features={["Keyword-targeted content", "AI search optimization", "Internal linking strategy", "Monthly content calendar"]
-            }
-            ctaText="Learn More"
-            compact={true}
-          />
-          <ServiceCard
-            title="Authority Building"
-            description="Strategic link acquisition and brand positioning to establish domain authority."
-            features={["Outreach campaigns", "Guest posting placement", "PR distribution", "Backlink analysis"]
-            }
-            ctaText="Learn More"
-            compact={true}
-          />
-          <ServiceCard
-            title="Local Search Domination"
-            description="Dominate your local search results and map listings in your area."
-            features={["Google Business Profile optimization", "Citation building", "Review management", "Local schema markup"]
-            }
-            ctaText="Learn More"
-            compact={true}
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section class="py-20 bg-gray-50 mt-20">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold mb-4">Your Path to Growth</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          A simple three-step approach to building visibility that drives real leads.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div class="text-center p-8 bg-white rounded-2xl">
-          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
-            <span class="text-white text-2xl font-bold">1</span>
-          </div>
-          <h3 class="text-xl font-bold mb-4">Audit & Analysis</h3>
-          <p class="text-gray-600">
-            We analyze your site's technical health, AI visibility potential, and competitive position.
-          </p>
-        </div>
-        <div class="text-center p-8 bg-white rounded-2xl">
-          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
-            <span class="text-white text-2xl font-bold">2</span>
-          </div>
-          <h3 class="text-xl font-bold mb-4">Implementation</h3>
-          <p class="text-gray-600">
-            We fix problems and optimize your presence across Google and AI search platforms.
-          </p>
-        </div>
-        <div class="text-center p-8 bg-white rounded-2xl">
-          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
-            <span class="text-white text-2xl font-bold">3</span>
-          </div>
-          <h3 class="text-xl font-bold mb-4">Growth & Monitoring</h3>
-          <p class="text-gray-600">
-            Ongoing monitoring and optimization keeps your visibility strong as search evolves.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section class="py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6">Ready to Explore Your Options?</h2>
-      <p class="text-gray-600 text-lg mb-10 max-w-2xl mx-auto">
-        Schedule your free audit to understand your current visibility and find the right service path for your business goals.
+<Layout title={title} description={description} path="/services" structuredData={serviceSchema}>
+  <section class="site-container pt-12 md:pt-16">
+    <div class="max-w-4xl">
+      <div class="eyebrow">Services</div>
+      <h1 class="mt-4 text-4xl font-semibold tracking-tight text-jvv-dark md:text-6xl">Three paths to technical visibility and AI-ready discovery</h1>
+      <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+        Some businesses need structural fixes, some need ongoing AI visibility strategy, and some need a website rebuild to unlock growth. JVV Digital helps you determine the right path instead of forcing a generic package.
       </p>
-      <a 
-        href="/contact" 
-        class="inline-block bg-jvv-orange text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all duration-200 transform hover:scale-105 shadow-xl"
-      >
-        Get Your Free Audit →
-      </a>
-      <p class="text-gray-500 text-sm mt-4">
-        30-minute consultation • Complete technical assessment • Zero obligation
-      </p>
+    </div>
+  </section>
+
+  <section class="site-container py-16 md:py-20">
+    <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+      <div class="surface-strong p-8 md:p-10">
+        <div class="eyebrow">Path 1</div>
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-jvv-dark">Technical Visibility Foundation</h2>
+        <p class="mt-4 text-base leading-7 text-slate-600">
+          Fix structural issues that prevent search engines and AI systems from understanding and properly ranking your site. This is the first step when the foundation needs work.
+        </p>
+        <ul class="mt-6 space-y-3 text-sm leading-6 text-slate-700">
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-orange"></span><span>Crawlability and index optimization</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-orange"></span><span>Schema and structured data</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-orange"></span><span>Site architecture and internal linking</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-orange"></span><span>Speed, mobile, and technical health checks</span></li>
+        </ul>
+      </div>
+
+      <div class="surface p-8 md:p-10">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-jvv-orange">What this does</div>
+        <h3 class="mt-4 text-2xl font-semibold tracking-tight text-jvv-dark">Makes the site easier to understand</h3>
+        <p class="mt-4 text-base leading-7 text-slate-600">
+          The result is a site that gives modern search systems fewer reasons to hesitate and more reasons to trust what it is seeing.
+        </p>
+        <div class="mt-6 rounded-[1.5rem] bg-slate-50 p-5 text-sm leading-6 text-slate-600">
+          Technical clarity first, then growth.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-container py-16 md:py-20">
+    <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+      <div class="surface p-8 md:p-10 lg:order-2">
+        <div class="eyebrow">Path 2</div>
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-jvv-dark">AI plus Search Visibility Strategy</h2>
+        <p class="mt-4 text-base leading-7 text-slate-600">
+          Track how your business appears across search engines and AI-driven recommendation systems, then adjust strategically as those systems change.
+        </p>
+        <ul class="mt-6 space-y-3 text-sm leading-6 text-slate-700">
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-blue"></span><span>AI visibility monitoring</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-blue"></span><span>Prompt aligned content opportunities</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-blue"></span><span>Entity and authority reinforcement</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-blue"></span><span>Monthly priorities and practical adjustments</span></li>
+        </ul>
+      </div>
+
+      <div class="surface-strong p-8 md:p-10 lg:order-1">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-jvv-orange">What this does</div>
+        <h3 class="mt-4 text-2xl font-semibold tracking-tight text-jvv-dark">Keeps visibility current</h3>
+        <p class="mt-4 text-base leading-7 text-slate-600">
+          Search and AI systems keep evolving. Ongoing strategy helps your business stay visible instead of drifting out of view as the landscape shifts.
+        </p>
+        <div class="mt-6 rounded-[1.5rem] bg-slate-50 p-5 text-sm leading-6 text-slate-600">
+          Built for businesses that already know attention matters.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-container py-16 md:py-20">
+    <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+      <div class="surface-strong p-8 md:p-10">
+        <div class="eyebrow">Path 3</div>
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-jvv-dark">Strategic Website Infrastructure</h2>
+        <p class="mt-4 text-base leading-7 text-slate-600">
+          When the current site limits growth, I can rebuild only what is necessary or create a new site from the ground up with the right technical foundation from the start.
+        </p>
+        <ul class="mt-6 space-y-3 text-sm leading-6 text-slate-700">
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-orange"></span><span>Rebuilds for clarity and speed</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-orange"></span><span>New sites built for discoverability</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-orange"></span><span>Conversion focused page structure</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-jvv-orange"></span><span>Technical SEO from day one</span></li>
+        </ul>
+      </div>
+
+      <div class="surface p-8 md:p-10">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-jvv-orange">What this does</div>
+        <h3 class="mt-4 text-2xl font-semibold tracking-tight text-jvv-dark">Builds the right starting point</h3>
+        <p class="mt-4 text-base leading-7 text-slate-600">
+          If a site is slowing growth before it even starts, rebuilding can be the cleaner path. The goal is not a prettier site, it is a site that can actually support the business.
+        </p>
+        <div class="mt-6 rounded-[1.5rem] bg-slate-50 p-5 text-sm leading-6 text-slate-600">
+          Good infrastructure makes every future marketing move easier.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-container py-16 md:py-20">
+    <SectionHeading
+      eyebrow="Flexible expansion"
+      title="Add-ons only when they make sense"
+      copy="Every project is different, so the work can expand in the direction that best supports the business instead of forcing a preset menu."
+      center
+    />
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="surface-strong p-6">
+        <div class="text-sm font-semibold uppercase tracking-[0.18em] text-jvv-orange">Content support</div>
+        <p class="mt-3 text-sm leading-6 text-slate-600">Content creation aligned with AI visibility and the questions people are actually asking.</p>
+      </div>
+      <div class="surface-strong p-6">
+        <div class="text-sm font-semibold uppercase tracking-[0.18em] text-jvv-orange">Tracking</div>
+        <p class="mt-3 text-sm leading-6 text-slate-600">Better measurement so decisions are based on what the site is doing, not guesswork.</p>
+      </div>
+      <div class="surface-strong p-6">
+        <div class="text-sm font-semibold uppercase tracking-[0.18em] text-jvv-orange">Implementation support</div>
+        <p class="mt-3 text-sm leading-6 text-slate-600">Guidance for teams that want the plan and need help turning it into finished work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-container py-16 md:py-20">
+    <div class="surface p-8 md:p-10">
+      <SectionHeading
+        eyebrow="How it works"
+        title="A simple process that keeps the work grounded"
+        copy="The goal is to make the path clear, reduce guesswork, and focus on the most useful move first."
+      />
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <div class="rounded-[1.5rem] bg-slate-50 p-6">
+          <div class="text-4xl font-semibold text-jvv-blue">1</div>
+          <h3 class="mt-4 text-xl font-semibold text-jvv-dark">Review</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600">I analyze the current site, or the planned site if you are starting from scratch.</p>
+        </div>
+        <div class="rounded-[1.5rem] bg-slate-50 p-6">
+          <div class="text-4xl font-semibold text-jvv-orange">2</div>
+          <h3 class="mt-4 text-xl font-semibold text-jvv-dark">Prioritize</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600">I identify the technical fixes, strategy adjustments, and structural choices that matter most.</p>
+        </div>
+        <div class="rounded-[1.5rem] bg-slate-50 p-6">
+          <div class="text-4xl font-semibold text-jvv-blue">3</div>
+          <h3 class="mt-4 text-xl font-semibold text-jvv-dark">Implement and refine</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600">I make the plan real, measure the results, and adjust based on what the work actually shows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-container py-16 md:py-20">
+    <div class="surface-dark overflow-hidden p-8 md:p-10">
+      <div class="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div>
+          <div class="eyebrow border-white/10 bg-white/10 text-white/90">Ready when you are</div>
+          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">Start with a free review, then decide what is worth doing</h2>
+          <p class="mt-4 max-w-2xl text-base leading-7 text-white/80">
+            You do not need to arrive knowing the exact service you need. Share the basics, and I will point you toward the cleanest next step.
+          </p>
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+          <a href="/contact" class="btn-ghost">Request your free review</a>
+          <a href="/about" class="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-transparent px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Meet the founder</a>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

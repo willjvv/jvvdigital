@@ -2,50 +2,54 @@
 interface Props {
   title: string;
   description: string;
-  features: string[];
-  price?: string;
+  bullets: string[];
+  eyebrow?: string;
+  featured?: boolean;
+  href?: string;
   ctaText?: string;
-  highlighted?: boolean;
-  compact?: boolean;
 }
 
-const { title, description, features, price, ctaText = "Learn More", highlighted = false, compact = false } = Astro.props;
+const {
+  title,
+  description,
+  bullets,
+  eyebrow,
+  featured = false,
+  href = '/contact',
+  ctaText = 'Request a free review'
+} = Astro.props;
 ---
-
-<div class={`bg-white rounded-2xl h-full flex flex-col ${compact ? 'p-6' : 'p-8'} ${highlighted ? 'border-2 border-jvv-orange shadow-xl' : 'border border-gray-200 shadow-lg'}`}>
-  <div class="mb-6">
-    {!compact && (
-      <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-4 text-white">
-        <slot name="icon">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-        </slot>
-      </div>
-    )}
-    <h3 class={`${compact ? 'text-xl' : 'text-2xl'} font-bold text-gray-900 mb-3`}>{title}</h3>
-    <p class="text-gray-600 mb-6">{description}</p>
+<article class:list={[
+  'surface-strong flex h-full flex-col p-7 transition duration-200 hover:-translate-y-1',
+  featured ? 'border-jvv-blue/30 shadow-glowBlue' : 'border-slate-200'
+]}>
+  <div class="mb-5 flex items-center justify-between gap-4">
+    <div>
+      {eyebrow && <div class="text-xs font-semibold uppercase tracking-[0.18em] text-jvv-orange">{eyebrow}</div>}
+      <h3 class="mt-2 text-2xl font-semibold tracking-tight text-jvv-dark">{title}</h3>
+    </div>
+    <div class:list={[
+      'flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl',
+      featured ? 'bg-jvv-blue text-white' : 'bg-slate-100 text-jvv-blue'
+    ]}>
+      <slot name="icon" />
+    </div>
   </div>
-  
-  <ul class="space-y-3 mb-8 flex-grow">
-    {features.map((feature) => (
-      <li class="flex items-start">
-        <svg class="w-5 h-5 text-jvv-orange mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+
+  <p class="text-sm leading-6 text-slate-600">{description}</p>
+
+  <ul class="mt-6 space-y-3 text-sm text-slate-700">
+    {bullets.map((item) => (
+      <li class="flex items-start gap-3">
+        <svg class="mt-0.5 h-5 w-5 shrink-0 text-jvv-orange" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4.5 10.2 8.1 13.8 15.5 6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <span class="text-gray-700 text-sm">{feature}</span>
+        <span>{item}</span>
       </li>
     ))}
   </ul>
-  
-  <a 
-    href="/contact" 
-    class={`block text-center rounded-lg font-semibold transition-colors duration-200 ${
-      compact ? 'py-2 px-4 text-sm' : 'py-3 px-6'
-    } ${
-      highlighted 
-        ? 'bg-jvv-orange text-white hover:bg-orange-600' 
-        : 'bg-jvv-blue text-white hover:bg-blue-700'
-    }`}
-  >
-    {ctaText}
-  </a>
-</div>
+
+  <div class="mt-8 pt-5">
+    <a class={featured ? 'btn-primary w-full' : 'btn-secondary w-full'} href={href}>{ctaText}</a>
+  </div>
+</article>

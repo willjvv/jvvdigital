@@ -1,45 +1,70 @@
 ---
+import QuickLeadForm from './QuickLeadForm.astro';
 ---
+<section class="relative overflow-hidden pt-10 md:pt-16">
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <div class="absolute left-[-8rem] top-0 h-80 w-80 rounded-full bg-jvv-blue/10 blur-3xl"></div>
+    <div class="absolute right-[-6rem] top-24 h-96 w-96 rounded-full bg-jvv-orange/12 blur-3xl"></div>
+    <div class="absolute inset-x-0 top-0 h-full soft-grid opacity-50"></div>
+  </div>
 
-<section class="py-20 md:py-32 overflow-hidden">
-  <div class="container mx-auto px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6">
-        Building <span class="gradient-text">Digital Authority</span><br />
-        That Drives Qualified Leads
-      </h1>
-      
-      <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-        I diagnose and fix the hidden technical problems that stifle your website's growth, then build its authority to rank not just on Google, but in the AI tools where your future clients are now searching.
-      </p>
-      
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a 
-          href="/contact" 
-          class="bg-jvv-orange text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all duration-200 transform hover:-translate-y-1 glow inline-block text-center"
-        >
-          Claim Your Free Audit →
-        </a>
-        <a 
-          href="/services" 
-          class="border-2 border-jvv-blue text-jvv-blue px-8 py-4 rounded-xl font-bold text-lg hover:bg-jvv-blue hover:text-white transition-all duration-200 inline-block text-center"
-        >
-          Explore Services
-        </a>
+  <div class="site-container pb-16 md:pb-24">
+    <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+      <div>
+        <div class="eyebrow">AI visibility plus technical SEO</div>
+        <h1 class="mt-5 max-w-3xl text-4xl font-semibold tracking-tight text-jvv-dark md:text-6xl">
+          Your business may rank in Google and still be invisible in ChatGPT, Perplexity, and AI-generated answers.
+        </h1>
+        <p class="section-copy max-w-2xl">
+          JVV Digital improves technical visibility so search engines and AI systems can understand, surface, and recommend your business where modern buying journeys increasingly begin.
+        </p>
+
+        <div class="mt-7 flex flex-wrap gap-3">
+          <span class="chip">Technical fixes first</span>
+          <span class="chip">AI visibility strategy</span>
+          <span class="chip">Website builds when needed</span>
+        </div>
+
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="#quick-review" class="btn-primary">Check My Visibility Setup</a>
+          <a href="/services" class="btn-secondary">See services</a>
+        </div>
+
+        <div class="mt-8 grid gap-4 sm:grid-cols-3">
+          <div class="surface-strong p-4">
+            <div class="text-xs font-semibold uppercase tracking-[0.18em] text-jvv-orange">Founder led</div>
+            <p class="mt-2 text-sm leading-6 text-slate-600">You work directly with Will, not a layered agency team.</p>
+          </div>
+          <div class="surface-strong p-4">
+            <div class="text-xs font-semibold uppercase tracking-[0.18em] text-jvv-orange">Built for today</div>
+            <p class="mt-2 text-sm leading-6 text-slate-600">AI search, technical SEO, and site structure all matter.</p>
+          </div>
+          <div class="surface-strong p-4">
+            <div class="text-xs font-semibold uppercase tracking-[0.18em] text-jvv-orange">No pricing wall</div>
+            <p class="mt-2 text-sm leading-6 text-slate-600">Start with a free review, then decide what is actually needed.</p>
+          </div>
+        </div>
       </div>
-      
-      <div class="mt-20 grid grid-cols-2 md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="text-3xl font-bold text-jvv-blue mb-2">100%</div>
-          <div class="text-gray-600">Focus on Results</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-jvv-orange mb-2">AI-Powered</div>
-          <div class="text-gray-600">Visibility Strategy</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-jvv-blue mb-2">24/7</div>
-          <div class="text-gray-600">Technical Monitoring</div>
+
+      <div id="quick-review" class="relative">
+        <div class="absolute -left-4 -top-4 h-24 w-24 rounded-full bg-jvv-orange/10 blur-2xl"></div>
+        <div class="absolute -bottom-6 right-0 h-28 w-28 rounded-full bg-jvv-blue/10 blur-2xl"></div>
+        <div class="surface-dark relative overflow-hidden p-4 md:p-5">
+          <div class="rounded-[1.25rem] border border-white/10 bg-white/10 p-5 md:p-6">
+            <div class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/90">
+              Start with a free visibility review
+            </div>
+            <h2 class="mt-4 text-2xl font-semibold tracking-tight text-white">Fast review, low friction, practical next steps.</h2>
+            <p class="mt-3 text-sm leading-6 text-white/80">
+              Send your email and website or planned domain. I will review the current setup for technical issues, AI visibility gaps, and the cleanest next move.
+            </p>
+            <div class="mt-5">
+              <QuickLeadForm />
+            </div>
+            <p class="mt-4 text-xs leading-5 text-white/70">
+              If you do not have a live site yet, that is fine. Use your planned domain and I will still point you in the right direction.
+            </p>
+          </div>
         </div>
       </div>
     </div>

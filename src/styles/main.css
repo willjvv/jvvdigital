@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-jvv-light text-slate-900 antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(0, 102, 255, 0.10), transparent 30%),
+    radial-gradient(circle at top right, rgba(255, 107, 53, 0.10), transparent 28%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 72%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(255, 107, 53, 0.18);
+  color: #0f172a;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+p, li {
+  text-wrap: pretty;
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .surface {
+    @apply rounded-[1.75rem] border border-slate-200/70 bg-white/80 shadow-soft backdrop-blur;
+  }
+
+  .surface-strong {
+    @apply rounded-[1.75rem] border border-slate-200 bg-white shadow-soft;
+  }
+
+  .surface-dark {
+    @apply rounded-[1.75rem] border border-white/10 bg-slate-950 text-white shadow-soft;
+    background-image: linear-gradient(135deg, rgba(0, 102, 255, 0.18), rgba(15, 23, 42, 0.96));
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-jvv-orange;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold tracking-tight text-jvv-dark md:text-4xl;
+  }
+
+  .section-copy {
+    @apply mt-4 max-w-3xl text-base leading-7 text-slate-600 md:text-lg;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-2xl bg-jvv-blue px-5 py-3 text-sm font-semibold text-white shadow-glowBlue transition duration-200 hover:-translate-y-0.5 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jvv-blue focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-jvv-dark transition duration-200 hover:-translate-y-0.5 hover:border-jvv-blue hover:text-jvv-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jvv-blue focus-visible:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition duration-200 hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950;
+  }
+
+  .field {
+    @apply mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 shadow-sm transition placeholder:text-slate-400 focus:border-jvv-blue focus:outline-none focus:ring-2 focus:ring-jvv-blue/15;
+  }
+
+  .field-label {
+    @apply text-sm font-medium text-slate-700;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600;
+  }
+
+  .card-grid {
+    @apply grid gap-6 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .soft-grid {
+    background-size: 26px 26px;
+    background-image: radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.09) 1px, transparent 0);
+  }
+}

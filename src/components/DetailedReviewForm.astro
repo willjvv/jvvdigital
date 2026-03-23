@@ -1,0 +1,62 @@
+---
+const formAction = 'https://formspree.io/f/xreynevv';
+---
+<form action={formAction} method="POST" class="surface-strong p-6 md:p-8">
+  <input type="hidden" name="_subject" value="Detailed Visibility Review Request" />
+  <input type="hidden" name="source" value="Detailed review page form" />
+
+  <div class="grid gap-5 md:grid-cols-2">
+    <div>
+      <label class="field-label" for="name">Name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required class="field" placeholder="Will Johntz Van Voris" />
+    </div>
+
+    <div>
+      <label class="field-label" for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required class="field" placeholder="you@company.com" />
+    </div>
+
+    <div class="md:col-span-2">
+      <label class="field-label" for="website">Website or planned domain</label>
+      <input id="website" name="website" type="url" autocomplete="url" required class="field" placeholder="https://yourdomain.com" />
+    </div>
+
+    <div>
+      <label class="field-label" for="situation">Which best describes your situation?</label>
+      <select id="situation" name="situation" required class="field">
+        <option value="" selected disabled>Select one</option>
+        <option>We have a website and need better visibility</option>
+        <option>Our website needs rebuilding</option>
+        <option>We need a website from scratch</option>
+        <option>We are not sure yet</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="field-label" for="industry">Industry, optional</label>
+      <input id="industry" name="industry" type="text" class="field" placeholder="B2B software, food service, etc." />
+    </div>
+
+    <div class="md:col-span-2">
+      <label class="field-label" for="referral">How did you hear about us? Optional</label>
+      <select id="referral" name="referral" class="field">
+        <option value="">Choose one</option>
+        <option>Search</option>
+        <option>Referral</option>
+        <option>Social media</option>
+        <option>Direct outreach</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="md:col-span-2">
+      <label class="field-label" for="help">How can we help you?</label>
+      <textarea id="help" name="help" rows="6" class="field" placeholder="Tell me a little about your goals, constraints, or where things feel stuck."></textarea>
+    </div>
+  </div>
+
+  <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <button class="btn-primary" type="submit">Request My Free Review</button>
+    <p class="text-sm text-slate-500">No spam. No obligation. Just a practical look at what is helping or holding back visibility.</p>
+  </div>
+</form>

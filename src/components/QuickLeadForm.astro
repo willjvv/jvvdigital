@@ -1,0 +1,25 @@
+---
+const formAction = 'https://formspree.io/f/xreynevv';
+---
+<form action={formAction} method="POST" class="surface-strong p-6 md:p-7">
+  <input type="hidden" name="_subject" value="Quick Visibility Review Request" />
+  <input type="hidden" name="source" value="Homepage quick review form" />
+
+  <div class="space-y-4">
+    <div>
+      <label class="field-label" for="quick-email">Email</label>
+      <input id="quick-email" name="email" type="email" autocomplete="email" required class="field" placeholder="you@company.com" />
+    </div>
+
+    <div>
+      <label class="field-label" for="quick-website">Website or planned domain</label>
+      <input id="quick-website" name="website" type="url" autocomplete="url" required class="field" placeholder="https://yourdomain.com" />
+    </div>
+
+    <button class="btn-primary w-full" type="submit">Check My Visibility Setup</button>
+
+    <p class="text-center text-xs leading-5 text-slate-500">
+      Includes technical issues, AI visibility gaps, and next-step recommendations. No obligation.
+    </p>
+  </div>
+</form>
