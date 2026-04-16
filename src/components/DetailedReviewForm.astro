@@ -1,5 +1,5 @@
 ---
-const formAction = 'https://formspree.io/f/xreynevv';
+const formAction = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT;
 ---
 <form action={formAction} method="POST" class="surface-strong p-6 md:p-8">
   <input type="hidden" name="_subject" value="Detailed Visibility Review Request" />
