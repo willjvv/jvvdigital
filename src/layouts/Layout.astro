@@ -27,12 +27,39 @@ const dataList = Array.isArray(structuredData)
 
 const organizationJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'ProfessionalService',
   name: 'JVV Digital',
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
-  description,
-  sameAs: []
+  image: `${siteUrl}/og-image.svg`,
+  description: description,
+  address: {
+    '@type': 'PostalAddress',
+    'addressLocality': 'New York',
+    'addressRegion': 'NY',
+    'addressCountry': 'US'
+  },
+  // This tells AI specifically what topics you are an authority on
+  knowsAbout: [
+    "Technical SEO",
+    "AI Visibility",
+    "Schema Markup",
+    "Structured Data",
+    "Web Development",
+    "Astro Framework"
+  ],
+  founder: {
+    '@type': 'Person',
+    'name': 'Will Johntz Van Voris',
+    'jobTitle': 'Founder & Technical Consultant',
+    'sameAs': [
+      'https://www.linkedin.com/in/willjvv',
+      'https://github.com/willjvv'
+    ]
+  },
+  sameAs: [
+    'https://www.linkedin.com/company/jvvdigital'
+  ]
 };
 
 const websiteJsonLd = {
@@ -73,11 +100,15 @@ const websiteJsonLd = {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={`${siteUrl}/og-image.svg`} />
+    
+    {/* Combined Global Schema */}
     <script type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)}></script>
+    
+    {/* Page-Specific Schema (e.g., Services, BlogPosts) */}
     {dataList.map((item) => <script type="application/ld+json" set:html={JSON.stringify(item)}></script>)}
   </head>
-  <body class="min-h-screen text-jvv-dark">
+  <body class="min-h-screen text-jvv-dark bg-white">
     <Header />
     <main>
       <slot />
